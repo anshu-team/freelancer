@@ -139,8 +139,6 @@
         </div>
         <?php include ("footer.php"); ?>
     </div>
-    <script type='text/javascript' src='js/script2.js' id='starlight-scripts-js'></script>
-    <script type='text/javascript' src='js/script3.js' id='wp-embed-js'></script>
 </body>
 
 </html>

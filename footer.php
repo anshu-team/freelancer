@@ -10,3 +10,20 @@
         </div>
     </div>
 </footer>
+<script>
+function showmenu() {
+    $("#myUl").each(function() {
+        if ($(this).css('display') == 'none') {
+            $(this).css('display', 'block');
+        } else {
+            $(this).css('display', 'none');
+        }
+    });
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script type='text/javascript' src='js/emoji-release.min.js'></script>
+<script type='text/javascript' src='js/jquery-core.js'></script>
+<script type='text/javascript' src='js/jquery-migrate.js'></script>
+<script type='text/javascript' src='js/starlight-scripts.js'></script>
+<script type='text/javascript' src='js/wp-embed.js'></script>

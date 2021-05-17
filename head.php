@@ -51,7 +51,7 @@
 }(window, document, window._wpemojiSettings);
 </script>
 <style type="text/css">
-img.wp-smiley,
+.img.wp-smiley,
 img.emoji {
     display: inline !important;
     border: none !important;
@@ -65,10 +65,8 @@ img.emoji {
 }
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css" />
-<link rel='stylesheet' id='wp-block-library-css' href='css/style2.css' type='text/css' media='all' />
-<link rel='stylesheet' id='starlight-style-css' href='css/style1.css' type='text/css' media='all' />
-<script type='text/javascript' src='js/script.js' id='jquery-core-js'></script>
-<script type='text/javascript' src='js/script1.js' id='jquery-migrate-js'></script>
+<link rel='stylesheet' href='css/wp-min.css' type='text/css' media='all' />
+<link rel='stylesheet' href='css/master.min.css' type='text/css' media='all' />
 <style type="text/css">
 .site-title a,
 .site-description,
@@ -132,8 +130,12 @@ a,
     margin: 0 !important;
 }
 </style>
-<style type="text/css" id="wp-custom-css">
+<style type="text/css">
 .responsive-image img {
     height: auto;
+}
+
+.Navbar__ToggleShow {
+    display: block !important;
 }
 </style>
