@@ -8,25 +8,28 @@
 <body class="home blog spacing-moderate hfeed">
     <div id="page" class="site">
         <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
         <?php include ("header.php"); ?>
+
         <div id="content" class="site-content">
             <section class="section-fullwidth section-main">
                 <div class="row">
                     <div class="columns small-12 medium-8">
                         <div id="primary" class="content-area">
                             <main id="main" class="site-main">
+                                <header class="page-header">
+                                    <h1 class="page-title">Category: <span>Comics</span></h1>
+                                </header>
                                 <article id="post-103"
                                     class="entry post-103 post type-post status-publish format-standard hentry category-game-design tag-beta-testers tag-game-design">
                                     <div class="entry-padding-area">
                                         <header class="entry-header">
                                             <div class="entry-categories">
                                                 <ul class="post-categories">
-                                                    <li><a href="#/category/game-design/" rel="category tag">Game
-                                                            Design</a></li>
+                                                    <li><a href="comics" rel="category tag">Comics</a></li>
                                                 </ul>
                                             </div>
-                                            <h2 class="entry-title"><a href="#/2021/01/01/beta-testers/"
-                                                    rel="bookmark">BETA TESTERS</a></h2>
+                                            <h2 class="entry-title"><a href="#" rel="bookmark">BETA TESTERS</a></h2>
                                         </header>
                                         <div class="entry-content">
                                             <p>I made a game once.</p>
@@ -137,6 +140,7 @@
             </section>
         </div>
         <?php include ("footer.php"); ?>
+    </div>
 </body>
 
 </html>
