@@ -7,7 +7,7 @@ include("config.php");
             <h1 class="site-title"><a href="http://localhost/freelancer" rel="home">James Clifton</a></h1>
             <p class="site-description">A man and his blog.</p>
         </div>
-        <nav id="site-navigation" class="main-navigation navbar-expand-md">
+        <nav id="site-navigation" class="main-navigation">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

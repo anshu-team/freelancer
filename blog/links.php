@@ -7,56 +7,58 @@ $lires = mysqli_query($con,$liquery);
 <html lang="en">
 
 <head>
-<?php include ("head.php"); ?>
+    <?php include ("head.php"); ?>
 </head>
 
 <body class="home blog spacing-moderate hfeed">
-<div id="page" class="site">
-<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+    <div id="page" class="site">
+        <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
-<?php include ("header.php"); ?>
+        <?php include ("header.php"); ?>
 
-<div id="content" class="site-content">
-<section class="section-fullwidth section-main">
-<div class="row">
-    <div class="columns small-12 medium-8">
-        <div id="primary" class="content-area">
-            <main id="main" class="site-main">
-                <article id="post-22" class="entry post-22 page type-page status-publish hentry">
-                    <div class="entry-padding-area">
-                        <header class="entry-header">
-                            <h1 class="entry-title">Links</h1>
-                        </header>
-                        <div class="entry-content">
-                            <p>
-                                <?php
+        <div id="content" class="site-content">
+            <section class="section-fullwidth section-main">
+                <div class="row">
+                    <div class="columns small-12 medium-8">
+                        <div id="primary" class="content-area">
+                            <main id="main" class="site-main">
+                                <article id="post-22" class="entry post-22 page type-page status-publish hentry">
+                                    <div class="entry-padding-area">
+                                        <header class="entry-header">
+                                            <h1 class="entry-title">Links</h1>
+                                        </header>
+                                        <div class="entry-content">
+                                            <p>
+                                                <?php
                                 while($lirow=mysqli_fetch_array($lires))
                                 {
                                 ?>
-                                <a href="<?php echo $lirow['url']; ?>" target="_blank"><?php echo $lirow['lname']; ?> </a>– 
-                                    <?php echo $lirow['ldesc']; ?>
-                                    <br>
-                                <?php
+                                                <a href="<?php echo $lirow['url']; ?>"
+                                                    target="_blank"><?php echo $lirow['lname']; ?> </a>–
+                                                <?php echo $lirow['ldesc']; ?>
+                                                <br>
+                                                <?php
                                 }
                                 ?>
+                                        </div>
+                                    </div>
+                                </article>
+                            </main>
                         </div>
                     </div>
-                </article>
-            </main>
-        </div>
-    </div>
-    <div class="columns small-12 medium-4">
+                    <div class="columns small-12 medium-4">
                         <aside id="secondary" class="widget-area" role="complementary">
                             <section id="search-2" class="widget widget_search">
                                 <form role="search" method="post" class="search-form" action="blogsearch">
                                     <label>
                                         <span class="screen-reader-text">Search for:</span>
                                         <input type="search" class="search-field" placeholder="Search &hellip;"
-                                            name="search" id="search" required=""/>
+                                            name="search" id="search" required="" />
                                     </label>
-                                   <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
+                                    <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
                                     </div> -->
-                                    <input type="submit" name="btn-search" id="btn-search" class="search-submit" value="Search" />
+                                    <input type="submit" name="btn-search" id="btn-search" class="search-submit"
+                                        value="Search" />
                                 </form>
                             </section>
                             <section id="recent-posts-2" class="widget widget_recent_entries">
@@ -69,7 +71,8 @@ $lires = mysqli_query($con,$liquery);
                                         {
                                             ?>
                                     <li>
-                                        <a href="post-detail?id=<?php echo $ro['pid']; ?>"><?php echo $ro['ptitle']; ?></a>
+                                        <a
+                                            href="post-detail?id=<?php echo $ro['pid']; ?>"><?php echo $ro['ptitle']; ?></a>
                                     </li>
                                     <?php
                                         }
@@ -94,18 +97,6 @@ $lires = mysqli_query($con,$liquery);
                                         }
                                         ?>
                                 </select>
-                                <!-- <script type="text/javascript">
-                                (function() {
-                                    var dropdown = document.getElementById("archives-dropdown-2");
-
-                                    function onSelectChange() {
-                                        if (dropdown.options[dropdown.selectedIndex].value !== '') {
-                                            document.location.href = this.options[this.selectedIndex].value;
-                                        }
-                                    }
-                                    dropdown.onchange = onSelectChange;
-                                })();
-                                </script> -->
                             </section>
                             <section id="categories-2" class="widget widget_categories">
                                 <h2 class="widget-title">Categories</h2>
@@ -177,13 +168,10 @@ $lires = mysqli_query($con,$liquery);
                             </section>
                         </aside>
                     </div>
-</div>
-</section>
-</div>
-<?php include ("footer.php"); ?>
-</div>
-<script type='text/javascript' src='js/script2.js' id='starlight-scripts-js'></script>
-<script type='text/javascript' src='js/script3.js' id='wp-embed-js'></script>
+                </div>
+            </section>
+        </div>
+        <?php include ("footer.php"); ?>
 </body>
 
 </html>

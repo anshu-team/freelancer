@@ -96,9 +96,10 @@ $prow = mysqli_fetch_array($pres);
                                         <input type="search" class="search-field" placeholder="Search &hellip;"
                                             name="search" id="search" required="" />
                                     </label>
-                                   <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
+                                    <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
                                     </div> -->
-                                    <input type="submit" name="btn-search" id="btn-search" class="search-submit" value="Search" />
+                                    <input type="submit" name="btn-search" id="btn-search" class="search-submit"
+                                        value="Search" />
                                 </form>
                             </section>
                             <section id="recent-posts-2" class="widget widget_recent_entries">
@@ -137,18 +138,6 @@ $prow = mysqli_fetch_array($pres);
                                         }
                                         ?>
                                 </select>
-                                <!-- <script type="text/javascript">
-                                (function() {
-                                    var dropdown = document.getElementById("archives-dropdown-2");
-
-                                    function onSelectChange() {
-                                        if (dropdown.options[dropdown.selectedIndex].value !== '') {
-                                            document.location.href = this.options[this.selectedIndex].value;
-                                        }
-                                    }
-                                    dropdown.onchange = onSelectChange;
-                                })();
-                                </script> -->
                             </section>
                             <section id="categories-2" class="widget widget_categories">
                                 <h2 class="widget-title">Categories</h2>

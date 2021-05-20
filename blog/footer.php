@@ -124,7 +124,7 @@ $(document).ready(function() {
     });
 
     $('body').on('mouseenter mouseleave', '.nav-item', function(e) {
-        if ($(window).width() > 750) {
+        if ($(window).width() > 860) {
             var _d = $(e.target).closest('.nav-item');
             _d.addClass('show');
             setTimeout(function() {

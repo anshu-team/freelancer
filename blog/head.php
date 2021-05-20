@@ -20,8 +20,8 @@ img.emoji {
     type='text/css' media='all' />
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css" /> -->
 <!-- <link rel='stylesheet' href='css/wp-min.css' type='text/css' media='all' id="wp-block-library-css" /> -->
-<link rel='stylesheet' href='css/master.min.css' type='text/css' media='all' id="starlight-style-css" />
 <link rel='stylesheet' href='css/style.css' type='text/css' media='all' id="starlight-style-css" />
+<link rel='stylesheet' href='css/master.min.css' type='text/css' media='all' id="starlight-style-css" />
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
 <style>
 .navbar-nav {

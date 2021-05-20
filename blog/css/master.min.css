@@ -2956,7 +2956,7 @@ select {
     }
     .main-navigation .children,
     .main-navigation .sub-menu {
-        display: none;
+        /* display: none; */
         border-top: 1px solid #ededed;
         background: #f0f0f0;
     }
@@ -2998,7 +2998,7 @@ select {
 }
 @media (min-width: 860px) {
     .menu-primary-container {
-        display: block;
+        display: block!important;
     }
     .main-navigation .menu-toggle {
         display: none;
@@ -4436,12 +4436,12 @@ select {
     color: #1a1a1a;
     background-color: #fafafa;
 }
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .main-navigation .menu-item a,
     .main-navigation .page_item a {
         padding: 20px 20px;
     }
-}
+} */
 @media (min-width: 860px) {
     .menu-item:nth-last-child(-n + 3) .children .children,
     .menu-item:nth-last-child(-n + 3) .sub-menu .sub-menu {
@@ -4628,17 +4628,17 @@ select {
     margin-bottom: 20px;
 }
 @media (max-width: 1200px) {
-    .spacing-moderate .main-navigation .menu-item a,
+    /* .spacing-moderate .main-navigation .menu-item a,
     .spacing-moderate .main-navigation .page_item a {
         padding: 15px;
-    }
+    } */
     .menu > .menu-item:nth-last-child(-n + 3) .children, 
     .menu > .menu-item:nth-last-child(-n + 3) .sub-menu, 
     .menu > .page_item:nth-last-child(-n + 3) .children, 
     .menu > .page_item:nth-last-child(-n + 3) .sub-menu {
         right: 0;
         left: auto!important;
-        top: 55px!important;
+        /* top: 55px!important; */
     }
 }
 @media (max-width: 860px) {
