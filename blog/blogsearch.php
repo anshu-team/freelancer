@@ -25,11 +25,13 @@ $prow = mysqli_fetch_array($pres);
                             <main id="main" class="site-main">
                                 <header class="page-header">
                                     <h1 class="page-title">Search Results for:
-                                        <span><?php echo $prow['catname']; ?></span>
+                                        <span><?php echo $_REQUEST['search']; ?></span>
                                     </h1>
                                 </header>
                                 <?php
                                 $pres1 = mysqli_query($con,$pquery);
+                                if(mysqli_num_rows($pres1) > 0)
+                                {
                                 while($prow1=mysqli_fetch_array($pres1))
                                 {
                                     ?>
@@ -70,7 +72,12 @@ $prow = mysqli_fetch_array($pres);
                                 </article>
                                 <?php
                                     }   
-                                    ?>
+                                }
+                                else
+                                {
+                                    echo "Sorry, but nothing matched your search terms. Please try again with some different keywords.";
+                                }
+                                ?>
                                 <nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
                                     <h2 class="screen-reader-text">Posts navigation</h2>
                                     <div class="nav-links">
@@ -87,7 +94,7 @@ $prow = mysqli_fetch_array($pres);
                                     <label>
                                         <span class="screen-reader-text">Search for:</span>
                                         <input type="search" class="search-field" placeholder="Search &hellip;"
-                                            name="search" id="search" />
+                                            name="search" id="search" required="" />
                                     </label>
                                    <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
                                     </div> -->

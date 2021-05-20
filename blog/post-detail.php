@@ -3,6 +3,8 @@ include("config.php");
 $id = $_GET['id'];
 $pquery = "select tbl_post.*,tbl_category.catname from tbl_post inner join tbl_category on tbl_post.catid=tbl_category.catid where tbl_post.pid='$id'";
 $pres = mysqli_query($con,$pquery);
+$pp = mysqli_query($con,$pquery);
+$ppp = mysqli_fetch_array($pp);
 if(isset($_REQUEST['btn-comment']))
 {
 $pid = mysqli_real_escape_string($con,$_REQUEST['pid']);
@@ -15,6 +17,10 @@ $cdate = date('d F Y, h:i:s A');
 $cquery = "insert into tbl_comment(pid,comment,name,email,website,cdate) values('$pid','$comment','$name','$email','$website','$cdate')";
 mysqli_query($con,$cquery);
 }
+$c =  "select count(comment) from tbl_comment where pid='$id'";
+$cc = mysqli_query($con,$c);
+$ccc = mysqli_fetch_array($cc);
+$t = $ccc[0];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,9 +89,15 @@ mysqli_query($con,$cquery);
                 </nav>
                 <div id="comments" class="comments-area">
                     <h2 class="comments-title">
-                        0 thoughts on “<span>BETA TESTERS</span>”
+                        <?php echo $t; ?> thoughts on “<span><?php echo $ppp['ptitle']; ?></span>”
                     </h2>
                     <ol class="comment-list">
+                        <?php
+                        $cqueryy = "select * from tbl_comment where pid='$id'";
+                        $cress = mysqli_query($con,$cqueryy);
+                        while($croww=mysqli_fetch_array($cress))
+                        {
+                        ?>
                         <li id="comment-184" class="comment even thread-even depth-1">
                             <article id="div-comment-184" class="comment-body">
                                 <footer class="comment-meta">
@@ -96,19 +108,19 @@ mysqli_query($con,$cquery);
                                             class="avatar avatar-32 photo" height="32" width="32"
                                             loading="lazy"> <b class="fn"><a
                                                 href="https://www.google.co.in/"
-                                                rel="external nofollow ugc" class="url">dsfdsfsd</a></b>
+                                                rel="external nofollow ugc" class="url"><?php echo $croww['name']; ?></a></b>
                                         <span class="says">says:</span>
                                     </div><!-- .comment-author -->
                                     <div class="comment-metadata">
-                                        <a href="/2021/01/01/beta-testers/#comment-184"><time
-                                                datetime="2021-05-20T05:09:26+00:00">May 20, 2021 at
-                                                5:09 am</time></a>
+                                        <a ><time >
+                                                    <?php echo $croww['cdate']; ?>
+                                                </time></a>
                                     </div><!-- .comment-metadata -->
                                     <em class="comment-awaiting-moderation">Your comment is awaiting
                                         moderation.</em>
                                 </footer><!-- .comment-meta -->
                                 <div class="comment-content">
-                                    <p>dfdsf</p>
+                                    <p><?php echo $croww['comment']; ?></p>
                                 </div><!-- .comment-content -->
                                 <div class="reply"><a rel="nofollow" class="comment-reply-link"
                                         href="http://www.jamesclifton.com/2021/01/01/beta-testers/?replytocom=184#respond"
@@ -118,6 +130,9 @@ mysqli_query($con,$cquery);
                                         aria-label="Reply to dsfdsfsd">Reply</a></div>
                             </article><!-- .comment-body -->
                         </li><!-- #comment-## -->
+                        <?php
+                        }
+                        ?>
                     </ol>
                     <div id="respond" class="comment-respond">
                         <h3 id="reply-title" class="comment-reply-title">Leave a Reply
@@ -175,7 +190,7 @@ mysqli_query($con,$cquery);
                                     <label>
                                         <span class="screen-reader-text">Search for:</span>
                                         <input type="search" class="search-field" placeholder="Search &hellip;"
-                                            name="search" id="search" />
+                                            name="search" id="search" required="" />
                                     </label>
                                    <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
                                     </div> -->

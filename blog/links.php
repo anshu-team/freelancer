@@ -52,7 +52,7 @@ $lires = mysqli_query($con,$liquery);
                                     <label>
                                         <span class="screen-reader-text">Search for:</span>
                                         <input type="search" class="search-field" placeholder="Search &hellip;"
-                                            name="search" id="search" />
+                                            name="search" id="search" required=""/>
                                     </label>
                                    <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
                                     </div> -->
