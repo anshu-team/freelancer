@@ -82,6 +82,43 @@ if(isset($_REQUEST['btn-comment']))
                                     </div>
                                 </nav>
                                 <div id="comments" class="comments-area">
+                                    <h2 class="comments-title">
+                                        0 thoughts on “<span>BETA TESTERS</span>”
+                                    </h2>
+                                    <ol class="comment-list">
+                                        <li id="comment-184" class="comment even thread-even depth-1">
+                                            <article id="div-comment-184" class="comment-body">
+                                                <footer class="comment-meta">
+                                                    <div class="comment-author vcard">
+                                                        <img alt=""
+                                                            src="http://1.gravatar.com/avatar/75d23af433e0cea4c0e45a56dba18b30?s=32&amp;d=mm&amp;r=g"
+                                                            srcset="http://1.gravatar.com/avatar/75d23af433e0cea4c0e45a56dba18b30?s=64&amp;d=mm&amp;r=g 2x"
+                                                            class="avatar avatar-32 photo" height="32" width="32"
+                                                            loading="lazy"> <b class="fn"><a
+                                                                href="https://www.google.co.in/"
+                                                                rel="external nofollow ugc" class="url">dsfdsfsd</a></b>
+                                                        <span class="says">says:</span>
+                                                    </div><!-- .comment-author -->
+                                                    <div class="comment-metadata">
+                                                        <a href="/2021/01/01/beta-testers/#comment-184"><time
+                                                                datetime="2021-05-20T05:09:26+00:00">May 20, 2021 at
+                                                                5:09 am</time></a>
+                                                    </div><!-- .comment-metadata -->
+                                                    <em class="comment-awaiting-moderation">Your comment is awaiting
+                                                        moderation.</em>
+                                                </footer><!-- .comment-meta -->
+                                                <div class="comment-content">
+                                                    <p>dfdsf</p>
+                                                </div><!-- .comment-content -->
+                                                <div class="reply"><a rel="nofollow" class="comment-reply-link"
+                                                        href="http://www.jamesclifton.com/2021/01/01/beta-testers/?replytocom=184#respond"
+                                                        data-commentid="184" data-postid="103"
+                                                        data-belowelement="div-comment-184"
+                                                        data-respondelement="respond" data-replyto="Reply to dsfdsfsd"
+                                                        aria-label="Reply to dsfdsfsd">Reply</a></div>
+                                            </article><!-- .comment-body -->
+                                        </li><!-- #comment-## -->
+                                    </ol>
                                     <div id="respond" class="comment-respond">
                                         <h3 id="reply-title" class="comment-reply-title">Leave a Reply
                                             <small>
