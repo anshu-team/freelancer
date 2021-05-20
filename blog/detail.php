@@ -110,7 +110,7 @@ $prow = mysqli_fetch_array($pres);
                                 <section id="archives-2" class="widget widget_archive">
                                     <h2 class="widget-title">Archives</h2> <label class="screen-reader-text"
                                     for="archives-dropdown-2">Archives</label>
-                                    <select id="archives-dropdown-2" name="archive-dropdown">
+                                    <!-- <select id="archives-dropdown-2" name="archive-dropdown">
                                         <option value="">Select Month</option>
                                         <option value=''> January 2021 (1)</option>
                                         <option value=''> December 2020 (1)</option>
@@ -124,6 +124,16 @@ $prow = mysqli_fetch_array($pres);
                                         <option value=''> March 2020 (3)</option>
                                         <option value=''> February 2020 (2)</option>
                                         <option value=''> January 2020 (4)</option>
+                                    </select> -->
+                                    <select name="month" id="month" onchange="getmyear(this.value);">
+                                        <?php
+                                        for ($i = 0; $i < 12; $i++) {
+                                            $time = strtotime(sprintf('-%d months', $i));
+                                            $label = date('F Y', $time);
+                                            $value = date('F Y', $time);
+                                            echo "<option value='$value'>$label</option>";
+                                        }
+                                        ?>
                                     </select>
                                     <script type="text/javascript">
                                         (function() {
@@ -187,6 +197,20 @@ $prow = mysqli_fetch_array($pres);
                                         }else{
                                             $("#showlist").html('');
                                         }
+                                    }
+                                </script>
+                                <script type="text/javascript">
+                                    function getmyear(val)
+                                    {
+                                       $.ajax({
+                                        type : "POST",
+                                        url : "getmonthyear",
+                                        data : "pdate="+val,
+                                        success : function(result)
+                                        {
+                                            document.getElementById("primary").innerHTML=data;
+                                        }
+                                       });
                                     }
                                 </script>
 

@@ -37,7 +37,7 @@ $pres = mysqli_query($con,$pquery);
                                                         </a></li>
                                                 </ul>
                                             </div>
-                                            <h2 class="entry-title"><a href="#"
+                                            <h2 class="entry-title"><a href="post-detail?id=<?php echo $prow['pid']; ?>"
                                                     rel="bookmark"><?php echo $prow['ptitle']; ?></a></h2>
                                         </header>
                                         <div class="entry-content">
