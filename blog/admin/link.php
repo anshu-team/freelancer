@@ -116,6 +116,7 @@ if (isset($_POST["submit"]))
                           <th>ID</th>
                           <th>Name</th>
                           <th>Desc</th>
+                          <th>URL</th>
                           <th>Edit/Delete</th>
                         </tr>
                       </thead>
@@ -132,6 +133,7 @@ if (isset($_POST["submit"]))
                             <td><?php echo $crow['linkid']; ?></td>
                             <td><?php echo $crow['lname']; ?></td>
                             <td><?php echo $crow['ldesc']; ?></td>
+                            <td><?php echo $crow['url']; ?></td>
                             <td>
                               <a class="btn btn-info btn-md" href="link_edit?id=<?php echo urlencode(base64_encode($linkid)); ?>">
                                 <i class="fas fa-edit">

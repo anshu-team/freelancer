@@ -171,15 +171,16 @@ mysqli_query($con,$cquery);
     <div class="columns small-12 medium-4">
         <aside id="secondary" class="widget-area" role="complementary">
             <section id="search-2" class="widget widget_search">
-                <form role="search" method="get" class="search-form" action="#">
-                    <label>
-                        <span class="screen-reader-text">Search for:</span>
-                        <input type="search" class="search-field" placeholder="Search &hellip;" value=""
-                            name="sr" id="search" onkeyup="msearch(this.value)" />
-                    </label>
-                    <div style="display: block; position: relative; z-index: 1;" id="showlist">
-                    </div>
-                </form>
+                <form role="search" method="post" class="search-form" action="blogsearch">
+                                    <label>
+                                        <span class="screen-reader-text">Search for:</span>
+                                        <input type="search" class="search-field" placeholder="Search &hellip;"
+                                            name="search" id="search" />
+                                    </label>
+                                   <!--  <div style="display: block; position: relative; z-index: 1;" id="showlist">
+                                    </div> -->
+                                    <input type="submit" name="btn-search" id="btn-search" class="search-submit" value="Search" />
+                                </form>
             </section>
             <section id="recent-posts-2" class="widget widget_recent_entries">
                 <h2 class="widget-title">Recent Posts</h2>
