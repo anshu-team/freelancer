@@ -39,11 +39,11 @@ include("config.php");
                         </ul>
                     </li>
                     <li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-39">
-                        <a href="http://localhost/freelancer/links.php">Links</a>
+                        <a href="links">Links</a>
                     </li>
                     <li
                         class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-33">
-                        <a href="http://localhost/freelancer/privacy-policy.php">Privacy/Contact</a>
+                        <a href="privacy-policy">Privacy/Contact</a>
                     </li>
                 </ul>
             </div>

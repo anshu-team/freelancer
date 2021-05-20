@@ -102,7 +102,7 @@ $prow = mysqli_fetch_array($pres);
                                         {
                                             ?>
                                     <li>
-                                        <a href="#"><?php echo $ro['ptitle']; ?></a>
+                                        <a href="post-detail?id=<?php echo $ro['pid']; ?>"><?php echo $ro['ptitle']; ?></a>
                                     </li>
                                     <?php
                                         }
