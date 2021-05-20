@@ -2970,11 +2970,11 @@ select {
 }
 @media (max-width: 860px) {
     .menu-primary-container {
-        display: none;
+        /* display: none; */
         position: absolute;
         left: 0;
         width: 100%;
-        margin-top: 1.28571rem;
+        margin-top: 3.28571rem;
         background: rgba(255, 255, 255, 0.95);
         border-bottom: 1px solid #f0f0f0;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -3124,7 +3124,7 @@ select {
     }
     .menu-item-has-children > a {
         display: inline-block !important;
-        width: 80%;
+        width: 100%;
     }
     .menu-item-has-children.is-extended .dropdown-arrow {
         -webkit-transform: rotate(-90deg);
@@ -3342,6 +3342,7 @@ select {
 }
 .widget-area .search-form label {
     flex: 1 1 80%;
+    margin-bottom: 0px;
 }
 .widget-area .search-form input[type='search'] {
     width: calc(100% - 23px);

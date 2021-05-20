@@ -12,31 +12,32 @@
             <div class="collapse navbar-collapse menu-primary-container" id="navbarSupportedContent">
                 <ul id="primary-menu" class="navbar-nav menu">
                     <li
-                        class="nav-ite menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-26">
+                        class="nav-item menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-26">
                         <a class="" href="#">Home</a>
                     </li>
                     <li
                         class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-27">
-                        <a class="" href="#">Blog Pages</a>
-                        <ul class="sub-menu">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                            aria-expanded="false" href="#">Blog Pages</a>
+                        <ul class="sub-menu dropdown-menu">
                             <li id="menu-item-91"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-91">
+                                class="dropdown-item menu-item menu-item-type-taxonomy menu-item-object-category menu-item-91">
                                 <a href="#/category/comics/">Comics</a>
                             </li>
                             <li id="menu-item-66"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66">
+                                class="dropdown-item menu-item menu-item-type-taxonomy menu-item-object-category menu-item-66">
                                 <a href="#/category/ebay/">Ebay</a>
                             </li>
                             <li id="menu-item-98"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-98">
+                                class="dropdown-item menu-item menu-item-type-taxonomy menu-item-object-category menu-item-98">
                                 <a href="#/category/game-design/">Game Design</a>
                             </li>
                             <li id="menu-item-92"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-92">
+                                class="dropdown-item menu-item menu-item-type-taxonomy menu-item-object-category menu-item-92">
                                 <a href="#/category/google/">Google</a>
                             </li>
                             <li id="menu-item-61"
-                                class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61">
+                                class="dropdown-item menu-item menu-item-type-taxonomy menu-item-object-category menu-item-61">
                                 <a href="#/category/other/">Other</a>
                             </li>
                         </ul>
