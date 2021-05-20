@@ -94,18 +94,10 @@ if(!isset($_SESSION['email']))
           </a>
         </li>
         <li class="nav-item">
-          <a href="specification" class="nav-link">
+          <a href="link" class="nav-link">
             <i class="nav-icon fas fa-users"></i>
             <p>
-              Technical Specification
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="contact" class="nav-link">
-            <i class="nav-icon fas fa-address-book"></i>
-            <p>
-              Contact
+              Links
             </p>
           </a>
         </li>
