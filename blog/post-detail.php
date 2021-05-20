@@ -159,7 +159,8 @@ if(isset($_REQUEST['btn-comment']))
                                             </p>
                                             <p class="form-submit">
                                                 <input type="hidden" name="pid" id="pid" value="<?php echo $id; ?>">
-                                                <input type="submit" id="btn-comment" name="btn-comment" class="submit" value="Post Comment">
+                                                <input type="submit" id="btn-comment" name="btn-comment" class="submit"
+                                                    value="Post Comment">
                                             </p>
                                         </form>
                                     </div>
@@ -204,22 +205,18 @@ if(isset($_REQUEST['btn-comment']))
                             <section id="archives-2" class="widget widget_archive">
                                 <h2 class="widget-title">Archives</h2> <label class="screen-reader-text"
                                     for="archives-dropdown-2">Archives</label>
-                                <select id="archives-dropdown-2" name="archive-dropdown">
+                                <select name="month" id="archives-dropdown-2" onchange=" getmyear(this.value);">
                                     <option value="">Select Month</option>
-                                    <option value=''> January 2021 (1)</option>
-                                    <option value=''> December 2020 (1)</option>
-                                    <option value=''> November 2020 (1)</option>
-                                    <option value=''> October 2020 (1)</option>
-                                    <option value=''> September 2020 (1)</option>
-                                    <option value=''> August 2020 (1)</option>
-                                    <option value=''> July 2020 (1)</option>
-                                    <option value=''> May 2020 (1)</option>
-                                    <option value=''> April 2020 (1)</option>
-                                    <option value=''> March 2020 (3)</option>
-                                    <option value=''> February 2020 (2)</option>
-                                    <option value=''> January 2020 (4)</option>
+                                    <?php
+                                        for ($i = 0; $i < 12; $i++) {
+                                            $time = strtotime(sprintf('-%d months', $i));
+                                            $label = date('F Y', $time);
+                                            $value = date('F Y', $time);
+                                            echo "<option value='$value'>$label</option>";
+                                        }
+                                        ?>
                                 </select>
-                                <script type="text/javascript">
+                                <!-- <script type="text/javascript">
                                 (function() {
                                     var dropdown = document.getElementById("archives-dropdown-2");
 
@@ -230,7 +227,7 @@ if(isset($_REQUEST['btn-comment']))
                                     }
                                     dropdown.onchange = onSelectChange;
                                 })();
-                                </script>
+                                </script> -->
                             </section>
                             <section id="categories-2" class="widget widget_categories">
                                 <h2 class="widget-title">Categories</h2>
@@ -284,7 +281,21 @@ if(isset($_REQUEST['btn-comment']))
                                     }
                                 }
                                 </script>
-
+                                <script type="text/javascript">
+                                function getmyear(val) {
+                                    var data = val;
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "getmonthyear",
+                                        data: {
+                                            data: data
+                                        },
+                                        success: function(data) {
+                                            document.getElementById("primary").innerHTML = data;
+                                        }
+                                    });
+                                }
+                                </script>
                             </section>
                         </aside>
                     </div>

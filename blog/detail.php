@@ -116,21 +116,6 @@ $prow = mysqli_fetch_array($pres);
                             <section id="archives-2" class="widget widget_archive">
                                 <h2 class="widget-title">Archives</h2>
                                 <label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
-                                <!-- <select id="archives-dropdown-2" name="archive-dropdown">
-                                        <option value="">Select Month</option>
-                                        <option value=''> January 2021 (1)</option>
-                                        <option value=''> December 2020 (1)</option>
-                                        <option value=''> November 2020 (1)</option>
-                                        <option value=''> October 2020 (1)</option>
-                                        <option value=''> September 2020 (1)</option>
-                                        <option value=''> August 2020 (1)</option>
-                                        <option value=''> July 2020 (1)</option>
-                                        <option value=''> May 2020 (1)</option>
-                                        <option value=''> April 2020 (1)</option>
-                                        <option value=''> March 2020 (3)</option>
-                                        <option value=''> February 2020 (2)</option>
-                                        <option value=''> January 2020 (4)</option>
-                                    </select> -->
                                 <select name="month" id="archives-dropdown-2" onchange=" getmyear(this.value);">
                                     <option value="">Select Month</option>
                                     <?php

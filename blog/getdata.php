@@ -5,6 +5,7 @@ if(isset($_REQUEST['catid']))
 	$catid = $_REQUEST['catid'];
 	$pquery = "select tbl_post.*,tbl_category.catname from tbl_post inner join tbl_category on tbl_post.catid=tbl_category.catid where tbl_category.catid='$catid'";
 	$pres = mysqli_query($con,$pquery);
+	$prow = mysqli_fetch_array($pres);
 	?>
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
@@ -12,7 +13,8 @@ if(isset($_REQUEST['catid']))
             <h1 class="page-title">Category: <span><?php echo $prow['catname']; ?></span></h1>
         </header>
         <?php
-            while($prow=mysqli_fetch_array($pres))
+            $pres1 = mysqli_query($con,$pquery);
+            while($prow1=mysqli_fetch_array($pres1))
             {
         ?>
         <article id="post-103"
@@ -21,14 +23,14 @@ if(isset($_REQUEST['catid']))
                 <header class="entry-header">
                     <div class="entry-categories">
                         <ul class="post-categories">
-                            <li><a href="#" rel="category tag"><?php echo $prow['catname']; ?></a></li>
+                            <li><a href="#" rel="category tag"><?php echo $prow1['catname']; ?></a></li>
                         </ul>
                     </div>
-                    <h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $prow['ptitle']; ?></a></h2>
+                    <h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $prow1['ptitle']; ?></a></h2>
                 </header>
                 <div class="entry-content">
                     <p>
-                        <?php echo $prow['pdesc']; ?>
+                        <?php echo $prow1['pdesc']; ?>
                     </p>
                 </div>
             </div>
@@ -36,10 +38,10 @@ if(isset($_REQUEST['catid']))
                 <footer class="entry-footer">
                     <a class='read-more' href='#'>Continue reading</a><span class="posted-on"><a href="#"
                             rel="bookmark"><time class="entry-date published"
-                                datetime=""><?php echo $prow['pdate']; ?></time></a></span><span class="byline"> by
+                                datetime=""><?php echo $prow1['pdate']; ?></time></a></span><span class="byline"> by
                         <span class="author vcard"><a class="url fn n"
-                                href="#"><?php echo $prow['pauthor']; ?></a></span></span><span class="comments-link"><a
-                            href="#">Leave
+                                href="#"><?php echo $prow1['pauthor']; ?></a></span></span><span
+                        class="comments-link"><a href="#">Leave
                             a comment</a></span>
                 </footer>
             </div>
