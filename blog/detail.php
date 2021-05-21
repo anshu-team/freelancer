@@ -4,6 +4,14 @@ $id = $_GET['id'];
 $pquery = "select tbl_post.*,tbl_category.catname from tbl_post inner join tbl_category on tbl_post.catid=tbl_category.catid where tbl_category.catid='$id'";
 $pres = mysqli_query($con,$pquery);
 $prow = mysqli_fetch_array($pres);
+$per_page_record = 2;
+if (isset($_GET["page"])) {    
+    $page  = $_GET["page"];    
+}    
+else {    
+    $page=1;    
+}
+$start_from = ($page-1) * $per_page_record;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,7 +80,27 @@ $prow = mysqli_fetch_array($pres);
                                 <nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
                                     <h2 class="screen-reader-text">Posts navigation</h2>
                                     <div class="nav-links">
-                                        <div class="nav-previous"><a href="#">Older posts</a></div>
+                                        <?php  
+                                            $myquery = "SELECT COUNT(*) FROM tbl_post";     
+                                            $rs_result = mysqli_query($con, $myquery);     
+                                            $row = mysqli_fetch_row($rs_result);     
+                                            $total_records = $row[0];    
+                                            // Number of pages required.   
+                                            $total_pages = ceil($total_records / $per_page_record); ?>
+                                        <div class='nav-previous'>
+                                            <?php
+                                            if($page<$total_pages){ 
+                                                echo "<a href='detail?id=".$id."&&page=".($page+1)."'> Older posts </a>";
+                                            }
+                                            ?>
+                                        </div>
+                                        <div class='nav-next'>
+                                            <?php
+                                            if($page>=2){
+                                                
+                                                echo "<a href='detail?id=".$id."&&page=" .($page-1)."'> Newer posts </a>";
+                                            } ?>
+                                        </div>
                                     </div>
                                 </nav>
                             </main>
