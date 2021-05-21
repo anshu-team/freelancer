@@ -1,5 +1,19 @@
 <?php
 include("config.php");
+$ip_address = $_SERVER['REMOTE_ADDR'];
+$vdate = date("d-m-Y");
+$q = "select * from tbl_visitor where ip_address='$ip_address'";
+$res = mysqli_query($con,$q);
+if(mysqli_num_rows($res) == 1)
+{
+    $q = "update tbl_visitor set vdate='$vdate' where ip_address='$ip_address'";
+}
+else
+{
+    $q = "insert into tbl_visitor(ip_address,vdate) values('$ip_address','$vdate')";
+}
+mysqli_query($con,$q);
+
 $pquery = "select tbl_post.*,tbl_category.catname from tbl_post inner join tbl_category on tbl_post.catid=tbl_category.catid";
 $pres = mysqli_query($con,$pquery);
 ?>

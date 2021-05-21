@@ -24,7 +24,7 @@ if(!isset($_SESSION['email']))
   <!-- Brand Logo -->
   <a href="dashboard" class="brand-link">
     <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-    <span class="brand-text font-weight-light">Greenwave Technologies</span>
+    <span class="brand-text font-weight-light">Blog</span>
   </a>
 
   <!-- Sidebar -->
@@ -98,6 +98,14 @@ if(!isset($_SESSION['email']))
             <i class="nav-icon fas fa-users"></i>
             <p>
               Links
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="comment" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Comments
             </p>
           </a>
         </li>
