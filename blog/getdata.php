@@ -7,6 +7,7 @@ if(isset($_REQUEST['catid']))
 	$pres = mysqli_query($con,$pquery);
 	$prow = mysqli_fetch_array($pres);
 	?>
+
 <div id="primary" class="content-area">
     <main id="main" class="site-main">
         <header class="page-header">
@@ -26,7 +27,7 @@ if(isset($_REQUEST['catid']))
                             <li><a href="#" rel="category tag"><?php echo $prow1['catname']; ?></a></li>
                         </ul>
                     </div>
-                    <h2 class="entry-title"><a href="#" rel="bookmark"><?php echo $prow1['ptitle']; ?></a></h2>
+                    <h2 class="entry-title"><a href="post-detail?id=<?php echo $prow1['pid']; ?>" rel="bookmark"><?php echo $prow1['ptitle']; ?></a></h2>
                 </header>
                 <div class="entry-content">
                     <p>
@@ -36,12 +37,12 @@ if(isset($_REQUEST['catid']))
             </div>
             <div class="entry-padding-area footer">
                 <footer class="entry-footer">
-                    <a class='read-more' href='#'>Continue reading</a><span class="posted-on"><a href="#"
+                    <a class='read-more' href='post-detail?id=<?php echo $prow1['pid']; ?>'>Continue reading</a><span class="posted-on"><a href="#"
                             rel="bookmark"><time class="entry-date published"
                                 datetime=""><?php echo $prow1['pdate']; ?></time></a></span><span class="byline"> by
                         <span class="author vcard"><a class="url fn n"
                                 href="#"><?php echo $prow1['pauthor']; ?></a></span></span><span
-                        class="comments-link"><a href="#">Leave
+                        class="comments-link"><a href="post-detail?id=<?php echo $prow1['pid']; ?>">Leave
                             a comment</a></span>
                 </footer>
             </div>
@@ -49,12 +50,12 @@ if(isset($_REQUEST['catid']))
         <?php
         }   
         ?>
-        <nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
+        <!-- <nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
             <h2 class="screen-reader-text">Posts navigation</h2>
             <div class="nav-links">
                 <div class="nav-previous"><a href="#">Older posts</a></div>
             </div>
-        </nav>
+        </nav> -->
     </main>
 </div>
 </div>

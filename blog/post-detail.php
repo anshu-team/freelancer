@@ -37,8 +37,8 @@ if(isset($_REQUEST['btn-comment']))
     $mail->Host = "smtp.gmail.com";
     $mail->SMTPAuth = "true";
     $mail->Port = "587";
-    $mail->Username = "divyaprajapati180@gmail.com";
-    $mail->Password = "Chaku@1998";
+    $mail->Username = "YOUR email";
+    $mail->Password = "Email Password";
     $mail->Subject = "Comment";
     $mail->setFrom($email);
     $mail->isHTML(true);
@@ -108,7 +108,7 @@ while($prow=mysqli_fetch_array($pres))
                                         class="entry-date published"><?php echo $prow['pdate']; ?></time></a></span><span
                                 class="byline"> by <span class="author vcard"><a class="url fn n"
                                         href="#"><?php echo $prow['pauthor']; ?></a></span></span><span
-                                class="comments-link"><a href="#">Leave
+                                class="comments-link"><a href="post-detail?id=<?php echo $prow['pid']; ?>">Leave
                                     a comment</a></span>
                         </footer>
                     </div>

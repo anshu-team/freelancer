@@ -40,19 +40,19 @@ if(isset($_REQUEST['data']))
                                 datetime=""><?php echo $prow['pdate']; ?></time></a></span><span class="byline"> by
                         <span class="author vcard"><a class="url fn n"
                                 href="#"><?php echo $prow['pauthor']; ?></a></span></span><span class="comments-link"><a
-                            href="#">Leave a comment</a></span>
+                            href="post-detail?id=<?php echo $prow['pid']; ?>">Leave a comment</a></span>
                 </footer>
             </div>
         </article>
         <?php
         }   
         ?>
-        <nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
+        <!-- <nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
             <h2 class="screen-reader-text">Posts navigation</h2>
             <div class="nav-links">
                 <div class="nav-previous"><a href="#">Older posts</a></div>
             </div>
-        </nav>
+        </nav> -->
     </main>
 </div>
 </div>
