@@ -68,8 +68,9 @@ $start_from = ($page-1) * $per_page_record;
                                                         class="entry-date published"
                                                         datetime=""><?php echo $prow1['pdate']; ?></time></a></span><span
                                                 class="byline"> by <span class="author vcard"><a class="url fn n"
-                                                        href="#"><?php echo $prow1['pauthor']; ?></a></span></span><span
-                                                class="comments-link"><a href="post-detail?id=<?php echo $prow1['pid']; ?>">Leave
+                                                        href="#"><?php echo $prow1['pauthor']; ?></a></span></span>
+                                            <span class="comments-link"><a
+                                                    href="post-detail?id=<?php echo $prow['pid']; ?>/comment">Leave
                                                     a comment</a></span>
                                         </footer>
                                     </div>

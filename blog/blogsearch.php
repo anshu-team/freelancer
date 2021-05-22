@@ -71,19 +71,20 @@ $prow = mysqli_fetch_array($pres);
                                     </div>
                                 </article>
                                 <?php
-                                    }   
-                                }
-                                else
-                                {
-                                    echo "Sorry, but nothing matched your search terms. Please try again with some different keywords.";
-                                }
-                                ?>
+                                    } ?>
                                 <nav class="navigation posts-navigation" role="navigation" aria-label="Posts">
                                     <h2 class="screen-reader-text">Posts navigation</h2>
                                     <div class="nav-links">
                                         <div class="nav-previous"><a href="#">Older posts</a></div>
                                     </div>
                                 </nav>
+                                <?php }
+                                else
+                                {
+                                echo "Sorry, but nothing matched your search terms. Please try again with some different
+                                keywords.";
+                                }
+                                ?>
                             </main>
                         </div>
                     </div>

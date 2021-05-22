@@ -73,14 +73,21 @@ $pres = mysqli_query($con,$pquery);
                                         <footer class="entry-footer">
                                             <a class='read-more'
                                                 href='post-detail?id=<?php echo $prow['pid']; ?>'>Continue
-                                                reading</a><span class="posted-on"><a href="#" rel="bookmark"><time
-                                                        class="entry-date published"
+                                                reading</a>
+                                            <span class="posted-on">
+                                                <a href="#" rel="bookmark"><time class="entry-date published"
                                                         datetime="2021-01-01T05:17:44+00:00">
                                                         <?php echo $prow['pdate']; ?>
-                                                    </time></a></span><span class="byline"> by <span
-                                                    class="author vcard"><a class="url fn n" href="#">
-                                                        <?php echo $prow['pauthor'];  ?></a></span></span><span
-                                                class="comments-link"><a href="post-detail?id=<?php echo $prow['pid']; ?>">Leave
+                                                    </time>
+                                                </a>
+                                            </span>
+                                            <span class="byline"> by <span class="author vcard"><a class="url fn n"
+                                                        href="#">
+                                                        <?php echo $prow['pauthor'];  ?></a>
+                                                </span>
+                                            </span>
+                                            <span class="comments-link"><a
+                                                    href="post-detail?id=<?php echo $prow['pid']; ?>/comment">Leave
                                                     a comment</a></span>
                                         </footer>
                                     </div>
